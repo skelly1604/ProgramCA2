@@ -1,0 +1,32 @@
+﻿<Window x:Class="ProgramCA2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProgramCA2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <ListBox x:Name="teamListBox" SelectionChanged="teamListBox_SelectionChanged" Margin="42,155,563,114">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Name}" />
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        <ListBox x:Name="playerListBox" Margin="361,152,217,115" SelectionChanged="ListBox_SelectionChanged"/>
+
+        <Label Content="Teams&#xD;&#xA;" HorizontalAlignment="Left" Margin="41,125,0,0" VerticalAlignment="Top"/>
+        <Label Content="Players" HorizontalAlignment="Left" Margin="364,130,0,0" VerticalAlignment="Top"/>
+        <Label Content="Record Result" HorizontalAlignment="Left" Margin="656,216,0,0" VerticalAlignment="Top"/>
+        <Button Content="Win" HorizontalAlignment="Left" Margin="664,243,0,0" VerticalAlignment="Top" Width="58" Height="24" RenderTransformOrigin="0.063,0.716" Click="winButton_Click"/>
+
+        <Button Content="Draw" HorizontalAlignment="Left" Margin="664,273,0,0" VerticalAlignment="Top" Width="58" Height="24" RenderTransformOrigin="0.063,0.716" Click="drawButton_Click"/>
+
+        <Button Content="Lose" HorizontalAlignment="Left" Margin="665,302,0,0" VerticalAlignment="Top" Height="22" Width="59" Click="lossButton_Click"/>
+
+        <Label Content="Tiddly Winks World Cup" HorizontalAlignment="Left" Margin="175,26,0,0" VerticalAlignment="Top" Height="61" Width="302" FontSize="24"/>
+
+    </Grid>
+</Window>
